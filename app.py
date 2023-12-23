@@ -20,8 +20,12 @@ def to_markdown(text):
   text = text.replace('•', '  *')
   return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
-os.getenv("AIzaSyAnIaH3xm21zz6eYpYxYr7MHvemab2rHV8")
-genai.configure(api_key=os.getenv("AIzaSyAnIaH3xm21zz6eYpYxYr7MHvemab2rHV8"))
+# os.getenv("AIzaSyAnIaH3xm21zz6eYpYxYr7MHvemab2rHV8")
+# genai.configure(api_key=os.getenv("AIzaSyAnIaH3xm21zz6eYpYxYr7MHvemab2rHV8"))
+
+GOOGLE_API_KEY='AIzaSyAnIaH3xm21zz6eYpYxYr7MHvemab2rHV8'
+
+genai.configure(api_key=GOOGLE_API_KEY)
 
 ## Function to load OpenAI model and get respones
 
